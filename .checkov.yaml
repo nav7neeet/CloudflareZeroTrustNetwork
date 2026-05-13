@@ -1,0 +1,42 @@
+framework:
+  - terraform
+  - terraform_plan
+
+# Checks to skip (by ID) — add justification as comments
+skip-check:
+  - CKV2_AWS_34  # Let's implement it later
+  - CKV_AWS_158  # Let's implement it later
+  - CKV_AWS_338  # 1 Year log retention is not required
+  - CKV_AWS_277  # incoming ping allowed from all ip
+  - CKV_AWS_260  # http traffic allowed from all ip
+  - CKV_AWS_382  # outgoing ping allowed to all ip
+  - CKV_AWS_130  # lets allow public ip for subnet
+
+# Specific checks to run (overrides defaults if set)
+# check:
+#   - CKV_AWS_*
+
+# Soft-fail mode: report findings but don't exit non-zero
+soft-fail: false
+
+# Output formats
+output:
+  - cli
+
+# Output to a file
+# output-file-path: ./checkov-report
+
+# Quiet mode (only show failed checks)
+quiet: true
+
+# disable certificate verification for corporate networks
+no-cert-verify: true
+
+# Compact output
+compact: true
+
+# Don't follow symlinks
+evaluate-variables: true
+
+# Skip downloading external modules (faster, scans only your code)
+download-external-modules: false
