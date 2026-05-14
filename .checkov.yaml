@@ -11,6 +11,8 @@ skip-check:
   - CKV_AWS_260  # http traffic allowed from all ip
   - CKV_AWS_382  # outgoing ping allowed to all ip
   - CKV_AWS_130  # lets allow public ip for subnet
+  - CKV_AWS_79   # Instance Metadata Service Version 2 is enforced through ec2 template
+  - CKV_AWS_126  # Detailed monitoring is enforced through ec2 template
 
 # Specific checks to run (overrides defaults if set)
 # check:
