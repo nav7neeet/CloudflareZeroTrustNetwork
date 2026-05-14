@@ -14,6 +14,9 @@ This project is the companion codebase for the **Cloudflare Zero Trust blog seri
 - A [Cloudflare Zero Trust](https://www.cloudflare.com/en-in/plans/zero-trust-services/) account (free tier works)
 - An AWS account with Cognito permissions
 
+> For complete setup instructions, prerequisites, and testing steps — refer to the blog series below. Each part walks through exactly what resources are provisioned and how to verify them.
+
+> For simplicity, most of the terraform modules are commented out. Follow the blog posts below and uncomment the modules which are required.
 
 ### Run
 
@@ -25,13 +28,13 @@ terraform plan
 terraform apply
 ```
 
-> For complete setup instructions, prerequisites, and testing steps — refer to the blog series below. Each part walks through exactly what resources are provisioned and how to verify them.
 
 | Part | Topic |
 |------|-------|
 | [Part 0](https://blog.mishraji.org/posts/cloudflare-ztna-part-0/) | Cloudflare One Client setup with AWS Cognito as the Identity Provider (OIDC) |
 | [Part 1](https://blog.mishraji.org/posts/cloudflare-ztna-part-1/) | Web Filtering — DNS, HTTP, and Network firewall policies |
 | [Part 2](https://blog.mishraji.org/posts/cloudflare-ztna-part-2/) | TLS Inspection and Data Loss Prevention (DLP) |
+| [Part 3](https://blog.mishraji.org/posts/cloudflare-ztna-part-3/) | Private Resource Access |
 
 ---
 
