@@ -1,9 +1,8 @@
 variable "allowed_domains" {
   description = "Domains explicitly allowed despite category blocks"
   type        = list(string)
-  default     = [
-    "thehindu.com",
-    # "google.com" #its blocked by 123
+  default = [
+    "example.com",
   ]
 }
 
