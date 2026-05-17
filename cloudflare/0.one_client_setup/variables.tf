@@ -19,8 +19,7 @@ variable "oauth_client" {
   })
 }
 
-# variable "device_posture" {
-#   description = "enable or disable device posture checks"
-#   type = bool
-#   default = false
-# }
+variable "one_client_custom_profile" {
+  description = "cloudflare one client custom profile/settings"
+  type        = bool
+}

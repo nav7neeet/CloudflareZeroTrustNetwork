@@ -19,3 +19,19 @@ resource "cloudflare_zero_trust_access_identity_provider" "identity_provider" {
     email_claim_name = "email"
   }
 }
+
+## Access policy that allows access to users authenticated by AWS Cognito IdP
+resource "cloudflare_zero_trust_access_policy" "access_policy" {
+  account_id = var.cloudflare_account_id
+  name       = "${var.unique_id}_allow_aws_cognito_users"
+  # precedence = 1
+  decision = "allow"
+
+  include = [
+    {
+      login_method = {
+        id = cloudflare_zero_trust_access_identity_provider.identity_provider.id
+      }
+    }
+  ]
+}

@@ -3,9 +3,10 @@ module "cloudflare" {
   providers = {
     cloudflare = cloudflare
   }
-  unique_id             = var.unique_id
-  cloudflare_account_id = var.cloudflare_account_id
-  oauth_client          = module.cognito.oauth_client
+  unique_id                 = var.unique_id
+  cloudflare_account_id     = var.cloudflare_account_id
+  oauth_client              = module.cognito.oauth_client
+  one_client_custom_profile = false
 }
 
 # module "cloudflare_web_filtering" {
