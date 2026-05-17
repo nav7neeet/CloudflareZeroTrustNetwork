@@ -10,8 +10,11 @@ output "oauth_client" {
   }
 }
 
-output "password" {
-  description = "password for aws cognito users. for simplicity its the same for all users."
-  value       = random_password.user_password.result
-  sensitive   = true
+output "user_credentials" {
+  description = "Usernames and shared password for all Cognito users"
+  value = {
+    usernames = [for k, v in var.users : v.email]
+    password  = random_password.user_password.result
+  }
+  sensitive = true
 }

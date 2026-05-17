@@ -1,6 +1,6 @@
 resource "cloudflare_zero_trust_gateway_logging" "gateway_logging" {
   account_id = var.cloudflare_account_id
-  redact_pii = true
+  redact_pii = false
 
   settings_by_rule_type = {
     dns = {
