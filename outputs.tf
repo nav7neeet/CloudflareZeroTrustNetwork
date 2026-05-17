@@ -1,6 +1,6 @@
-output "password" {
-  description = "password for aws cognito users. for simplicity its the same for all users."
-  value       = module.cognito.password
+output "user_credentials" {
+  description = "credentials for aws cognito users. for simplicity password is the same for all users."
+  value       = module.cognito.user_credentials
   sensitive   = true
 }
 

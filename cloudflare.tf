@@ -19,6 +19,7 @@ module "cloudflare" {
 #   http_policy           = false
 #   network_policy        = false
 #   dlp_policy            = false
+#   device_posture_policy = false
 # }
 
 
